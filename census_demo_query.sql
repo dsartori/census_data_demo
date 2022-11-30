@@ -37,6 +37,8 @@ select distinct [geo_code (por)]
 from census_raw_2016
 WHERE GEO_LEVEL = 4
 
+-- select * from #output
+
 update #output 
 set 
 	population_2016 = try_cast(c.[Dim  Sex (3)  Member ID   1   Total - Sex] as int)
